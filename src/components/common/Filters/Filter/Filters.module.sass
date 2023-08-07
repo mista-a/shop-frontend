@@ -1,0 +1,51 @@
+.menu
+  opacity: 0
+  scale: 0
+  transform-origin: top left
+  max-height: 285px
+  overflow-y: auto
+.openMenu
+  opacity: 1
+  scale: 1
+.menuEnterAnimation
+  animation: showMenu .4s
+  opacity: 1
+
+@keyframes showMenu 
+  0%
+    opacity: 0
+    transform: scale(0)
+  100%
+    opacity: 1
+    transform: scale(1)
+
+.menuExitAnimation
+  animation: hideMenu .3s
+  opacity: 0
+
+@keyframes hideMenu 
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+.filterButton
+  width: 100%
+  height: 100%
+  border: none
+  background-color: inherit
+  cursor: pointer
+.menu
+  display: flex
+  flex-direction: column
+  gap: 20px
+  width: 250px
+  position: absolute
+  top: calc(100% + 10px) 
+  left: 0%
+  padding: 25px 20px
+  background-color: #fff
+  z-index: 1
+  border: 1px solid #bbbbbb
+  border-radius: 13px
+  cursor: default
